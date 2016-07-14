@@ -1,0 +1,27 @@
+{
+  "name": "pokemondatagraber",
+  "version": "1.0.0",
+  "description": "Grabs pokemon data from the website https://fevgames.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PokemonGOAPI/PokemonDataGraber.git"
+  },
+  "keywords": [
+    "pokemongo",
+    "data"
+  ],
+  "author": "Livio Brunner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PokemonGOAPI/PokemonDataGraber/issues"
+  },
+  "homepage": "https://github.com/PokemonGOAPI/PokemonDataGraber#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "fs": "0.0.2"
+  }
+}
