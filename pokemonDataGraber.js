@@ -9,6 +9,7 @@ var pokemonDataGraber = {
             var currentPokemon = {};
             var $ = cheerio.load(body);
             var $table = $('#omc-full-article table');
+            var types = [];
 
             $table.find('strong').each(function () {
                 var key = $(this).text();
@@ -16,6 +17,12 @@ var pokemonDataGraber = {
                 switch (key) {
                     case 'Type I':
                     case 'Type II':
+                      $td.find('.icon-type').each(function () {
+                        types.push($(this).text().trim());
+                      })
+                      key = "Types";
+                      value = types;
+                      break;
                     case 'Weaknesses':
                         var value = [];
                         $td.find('.icon-type').each(function () {
