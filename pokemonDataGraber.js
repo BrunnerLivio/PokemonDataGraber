@@ -17,12 +17,12 @@ var pokemonDataGraber = {
                 switch (key) {
                     case 'Type I':
                     case 'Type II':
-                      $td.find('.icon-type').each(function () {
-                        types.push($(this).text().trim());
-                      })
-                      key = "Types";
-                      value = types;
-                      break;
+                        $td.find('.icon-type').each(function () {
+                            types.push($(this).text().trim());
+                        })
+                        key = "Types";
+                        value = types;
+                        break;
                     case 'Weaknesses':
                         var value = [];
                         $td.find('.icon-type').each(function () {
