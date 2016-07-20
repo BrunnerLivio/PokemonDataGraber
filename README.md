@@ -6,7 +6,10 @@ This script grabs data for Pokemon GO.
 You can access the data in the output.json file. (Status: 7/17/2016)
 
 ## Run
-Just type `npm run dev` to run this script
+1. Open up your terminal
+1. Install NodeJS & npm
+1. `npm install` to install all the dependencies
+1. Type `npm run dev` to run this script
 
 ## Import to Mongodb
 Just run the scripts/import.sh script an it will import the pokemons in your MongoDB Test-Database
