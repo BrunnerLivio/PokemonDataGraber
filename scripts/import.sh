@@ -1,0 +1,1 @@
+mongoimport --db test --collection pokemons --type json --file output.json --jsonArray
