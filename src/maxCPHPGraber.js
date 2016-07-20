@@ -23,7 +23,7 @@ class MaxCPHPGrabber {
                         let pokemonIndex = pokemons.indexOf(pokemon);
                         pokemon.MaxCP = parseInt($($tds[2]).text());
                         pokemon.MaxHP = parseInt($($tds[3]).text());
-                        this.logger("| " + pokemon.Name + " MaxCP:" + pokemon.MaxCP + " MaxHP: " + pokemon.MaxHP);
+                        console.log("| " + pokemon.Name + " MaxCP:" + pokemon.MaxCP + " MaxHP: " + pokemon.MaxHP);
                         pokemons[pokemonIndex] = pokemon;
                     }
 

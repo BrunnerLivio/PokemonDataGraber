@@ -3,7 +3,7 @@
 This script grabs data for Pokemon GO.
 
 ## Data
-You can access the data in the output.json file. (Status: 7/17/2016)
+You can access the data in the output.json file. (Status: 7/20/2016)
 
 ## Run
 1. Open up your terminal
