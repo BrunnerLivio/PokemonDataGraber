@@ -24,6 +24,7 @@ class FevgamesTableParser {
 
             var $td = this.$(element).parent().siblings('td');
             var value;
+            console.log(key);
             switch (key) {
                 case 'Type(s)':
                     value = [];
@@ -31,14 +32,6 @@ class FevgamesTableParser {
                         value.push(this.$(element).text().trim());
                     });
                     key = "Types";
-                    this.currentPokemon[key] = value;
-                    this.parse(callback);
-                    break;
-                case 'Weaknesses':
-                    value = [];
-                    $td.find('.icon-type').each((index, element) => {
-                        value.push(this.$(element).text().trim());
-                    });
                     this.currentPokemon[key] = value;
                     this.parse(callback);
                     break;
@@ -105,6 +98,27 @@ class FevgamesTableParser {
                 case 'Flee Rate':
                     key = 'FleeRate';
                     value = parseInt($td.text().trim().split('%')[0]) / 100;
+                    this.currentPokemon[key] = value;
+                    this.parse(callback);
+                    break;
+                case 'Images':
+                    this.parse(callback);
+                    break;
+                case 'Weak To (1.25x)':
+                    key = 'Weaknesses';
+                    value = [];
+                    $td.find('.icon-type').each((index, element) => {
+                        value.push(this.$(element).text().trim());
+                    });
+                    this.currentPokemon[key] = value;
+                    this.parse(callback);
+                    break;
+                case 'Resistant To (0.8x)':
+                    key = 'Resistant';
+                    value = [];
+                    $td.find('.icon-type').each((index, element) => {
+                        value.push(this.$(element).text().trim());
+                    });
                     this.currentPokemon[key] = value;
                     this.parse(callback);
                     break;
