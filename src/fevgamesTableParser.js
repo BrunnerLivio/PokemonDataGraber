@@ -2,6 +2,10 @@ var AttackDataGraber = require('./attackDataGraber');
 class FevgamesTableParser {
     constructor() {
         this.attackDataGraber = new AttackDataGraber();
+        this.nameSuffixes = {
+            "029": " ♀",
+            "032": " ♂"
+        };
     }
     getData($, $table) {
         this.$ = $;
@@ -76,6 +80,11 @@ class FevgamesTableParser {
                 case 'Name':
                     value = $td.text().split(')')[1].trim();
                     this.currentPokemon.Number = $td.text().substring(2, 5);
+
+                    if (this.nameSuffixes.hasOwnProperty(this.currentPokemon.Number)) {
+                        value += this.nameSuffixes[this.currentPokemon.Number];
+                    }
+
                     this.currentPokemon[key] = value;
                     this.parse(callback);
                     break;
@@ -120,6 +129,11 @@ class FevgamesTableParser {
                         value.push(this.$(element).text().trim());
                     });
                     this.currentPokemon[key] = value;
+                    this.parse(callback);
+                    break;
+                case 'About':
+                    $td.find('button, script').remove();
+                    this.currentPokemon[key] = $td.text().trim();
                     this.parse(callback);
                     break;
                 default:
