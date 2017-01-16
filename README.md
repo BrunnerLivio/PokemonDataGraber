@@ -1,5 +1,11 @@
 # Pokemon Data Graber
 
+IMPORTANT: This repository won't longer be maintained. There's a [new
+reposiotry](https://github.com/BrunnerLivio/PokemonGoDataTransformer),
+which reads data from "real" game data, instead of third party websites.
+
+====
+
 This script grabs data for Pokemon GO.
 
 ## Data
@@ -17,3 +23,4 @@ Just run the scripts/import.sh script an it will import the pokemons in your Mon
 ## Credits
 
 Thanks to [__isitin__](https://www.reddit.com/user/__isitin__) for the MaxCP / MaxHP list.
+
