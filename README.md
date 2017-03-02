@@ -6,7 +6,7 @@ which reads data from "real" game data, instead of third party websites.
 
 ====
 
-This script grabs data for Pokemon GO.
+This project is a web scraping tool from the website [https://fevgames.net](https://fevgames.net/pokemon-go/pokedex-table/)
 
 ## Data
 You can access the data in the output.json file. (Status: 7/20/2016)
