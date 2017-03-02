@@ -15,7 +15,7 @@ You can access the data in the output.json file. (Status: 7/20/2016)
 1. Open up your terminal
 1. Install NodeJS & npm
 1. `npm install` to install all the dependencies
-1. Type `npm run dev` to run this script
+1. Type `npm run start` to run this script
 
 ## Import to Mongodb
 Just run the scripts/import.sh script an it will import the pokemons in your MongoDB Test-Database
