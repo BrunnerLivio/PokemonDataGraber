@@ -1,12 +1,11 @@
 # Pokemon Data Graber
 
-IMPORTANT: This repository won't longer be maintained. There's a [new
-reposiotry](https://github.com/BrunnerLivio/PokemonGoDataTransformer),
-which reads data from "real" game data, instead of third party websites.
-
-====
-
 This project is a web scraping tool from the website [https://fevgames.net](https://fevgames.net/pokemon-go/pokedex-table/)
+
+
+## :warning: DEPRECATED :warning:
+>IMPORTANT: I highly recommend you not to use this repository! You may consider switching to [pokemongo-game-master Repository](https://github.com/BrunnerLivio/pokemongo-game-master), which reads real Pokemongo Game data!
+
 
 ## Data
 You can access the data in the output.json file. (Status: 7/20/2016)
